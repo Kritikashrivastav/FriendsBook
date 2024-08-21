@@ -2,15 +2,6 @@
   width: 100%;
 }
 
-/* .navbar.light {
-  background-color: pink;
-  color: #333;
-}
-
-.navbar.dark {
-  background-color: #222;
-  color: #fff;
-} */
 
 .navbar-items {
     display: flex;
@@ -33,8 +24,8 @@
 }
 
 .logo2 img {
-    width: 20px;
-    height: 30px;
+   scale: 1.5;
+   color: white;
 }
 
 /* Middle part */

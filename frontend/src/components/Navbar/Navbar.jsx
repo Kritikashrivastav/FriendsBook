@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import './navbar.css';
 import PythonIcon from '../../assets/images/python.png'
-import PlusIcon from '../../assets/images/plus.png'
 import ReactIcon from '../../assets/images/react.png'
-import EqualIcon from '../../assets/images/equal.png'
 import BoomIcon from '../../assets/images/boom.png'
 import BffIcon from '../../assets/images/bff.png'
 import SunIcon from '../../assets/images/sun.png'
 import MoonIcon from '../../assets/images/moon.png'
 import CreateUserModal from '../CreateUserModal/CreateUserModal';
+import { IoAdd } from "react-icons/io5";
+import { LuEqual } from "react-icons/lu";
 
 
 const Navbar = ({colormode, handleColorMode, setUsers}) => {
@@ -23,17 +23,13 @@ const Navbar = ({colormode, handleColorMode, setUsers}) => {
                   <img src={PythonIcon} alt='python logo'/>
                 </a>
 
-                <a className='logo2' href='#'>
-                  <img src={PlusIcon} alt='plus logo'/>
-                </a>
+                <IoAdd className='logo2'/>
 
                 <a className='logo1' href='#'>
                   <img src={ReactIcon} alt='react logo'/>
                 </a>
 
-                <a className='logo2' href='#'>
-                  <img src={EqualIcon} alt='equal logo'/>
-                </a>
+                <LuEqual className='logo2'/>
 
                 <a className='logo1' href='#'>
                   <img src={BoomIcon} alt='boom logo'/>

@@ -24,7 +24,7 @@ function App()
     <div className={`app ${colormode}`}>
       <Navbar setUsers={setUsers} colormode={colormode} handleColorMode={handleColorMode}/>
       
-      <UserGrid users={users} setUsers={setUsers}/>
+      <UserGrid users={users} setUsers={setUsers} colormode={colormode} handleColorMode={handleColorMode}/>
     </div>
  
 

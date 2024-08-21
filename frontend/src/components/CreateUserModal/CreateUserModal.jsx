@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './createusermodal.css'; // Import the CSS file
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,8 +15,24 @@ const CreateUserModal = ({ setUsers }) => {
         gender: '',
     });
 
+    useEffect(() => {
+        if (!isOpen) {
+            setInputs({
+                name: '',
+                role: '',
+                description: '',
+                gender: '',
+            });
+        }
+    }, [isOpen, setInputs]);
    
     const toggleModal = () => {
+        setInputs({
+            name: '',
+            role: '',
+            description: '',
+            gender: '',
+        });
         setIsOpen(!isOpen);
     };
 
@@ -24,8 +40,7 @@ const CreateUserModal = ({ setUsers }) => {
         e.preventDefault();
 
         if (!inputs.gender) {
-            toast.error(`Gender error: ${error.message}`, { autoClose: 4000 });
-            return;
+            toast.error('Please select a gender.', { position: "bottom-center", autoClose: 2000 });
         }
         setIsLoading(true)
         try{
@@ -111,7 +126,7 @@ const CreateUserModal = ({ setUsers }) => {
                                         type="radio"
                                         // name="gender"
                                         value="female"
-                                        checked={inputs.gender === "female"}
+                                        // checked={inputs.gender === "female"}
                                         onChange={(e) => setInputs({ ...inputs, gender: e.target.value })}
                                         required
                                     />
@@ -124,7 +139,7 @@ const CreateUserModal = ({ setUsers }) => {
                                     type="radio"
                                     // name="gender"
                                     value="male"
-                                    checked={inputs.gender === "male"}
+                                    // checked={inputs.gender === "male"}
                                     onChange={(e) => setInputs({ ...inputs, gender: e.target.value })}
                                     required
                                 />

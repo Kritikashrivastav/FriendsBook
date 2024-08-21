@@ -3,7 +3,7 @@ import './usergrid.css';
 import UserCard from '../UserCard/UserCard.jsx';
 import { BASE_URL } from '../../App.jsx';
 
-const UserGrid = ({users, setUsers}) => {
+const UserGrid = ({users, setUsers, colormode}) => {
     const[isLoading, setIsLoading] = useState(true)
    useEffect(() => {
     const getUsers = async () => {
@@ -26,7 +26,7 @@ const UserGrid = ({users, setUsers}) => {
   }, [setUsers])
   return (
     <>
-    <div className='grid-container'>
+     <div className={`grid-container ${colormode}`}>
       {users.map((user) => (
         <div key={user.id} className='user-card'>
           <UserCard user={user} setUsers={setUsers}/>
@@ -36,7 +36,7 @@ const UserGrid = ({users, setUsers}) => {
       ))} 
     </div>
 
-    {isLoading && (
+    {isLoading && ( 
       <div className='spin-box'>
         <div className='spinner'></div>
       </div>

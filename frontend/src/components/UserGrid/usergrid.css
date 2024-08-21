@@ -2,7 +2,12 @@
     display: grid;
     grid-template-columns:1fr;
     gap: 10px; 
+    background-color: #fff;
+  }
+
+  .grid-container.dark {
     background-color: #212426;
+    color: white;
   }
   
   @media (min-width: 768px) {

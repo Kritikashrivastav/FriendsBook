@@ -1,0 +1,98 @@
+.plus-btn{
+   scale: 1.4;
+   margin: 4px;
+   color: rgb(6, 66, 111);  
+} 
+.plus-btn:hover{
+  scale: 1.5;
+  cursor: pointer;
+  color: rgb(7, 7, 105);
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  
+  h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+
+  .update {
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 20px;
+
+  }
+
+  .update:hover {
+    background-color: #085e13; /* Lighter dark gray on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+} 
+  
+  .cancel {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .cancel:hover{
+    background-color: #821911;
+    transform: scale(1.05);
+  }
+ 

@@ -41,20 +41,29 @@
   
   /* Spinner */
 
-  .spin-box{
+  .spin-box {
     display: flex;
     justify-content: center;
+    margin-top: 20px; /* Add some space at the top if needed */
   }
 
-  .spinner{
-    width: 120px;
-    height: 120px;
-    border: 16px solid black;
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(227, 227, 227, 0.5); /* Lighter border for the full circle */
+    border-top: 5px solid rgb(227, 227, 227); /* Darker border for the top part */
     border-radius: 50%;
-    animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite; /* Spins every 1 second */
   }
-
-
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   .no-frnd{
     display: flex;
     justify-content: center;

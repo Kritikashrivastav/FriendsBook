@@ -14,26 +14,26 @@ import { LuEqual } from "react-icons/lu";
 const Navbar = ({colormode, handleColorMode, setUsers}) => {
 
   return (
-    <div className={`navbar ${colormode}` }>
+    <div className={ `navbar ${colormode}` }>
         <div className='navbar-items'>
 
           {/* Left part */}
             <div className='left-items'>
-                <a className='logo1' href='#'>
+                <div className='logo1' href='#'>
                   <img src={PythonIcon} alt='python logo'/>
-                </a>
+                </div>
 
                 <IoAdd className='logo2'/>
 
-                <a className='logo1' href='#'>
+                <div className='logo1' href='#'>
                   <img src={ReactIcon} alt='react logo'/>
-                </a>
+                </div>
 
                 <LuEqual className='logo2'/>
 
-                <a className='logo1' href='#'>
+                <div className='logo1' href='#'>
                   <img src={BoomIcon} alt='boom logo'/>
-                </a>
+                </div>
             </div>
 
 
